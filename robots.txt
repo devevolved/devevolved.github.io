@@ -1,0 +1,6 @@
+﻿# Allow access to all crawlers 
+User-agent: *
+Allow: /
+
+Sitemap: http://www.devevolved.net/sitemap.xml
+Sitemap: http://devevolved.net/sitemap.xml

@@ -13,6 +13,7 @@ gems:
   - jekyll-seo-tag
 
 # Output options (more information on Jekyll's site)
+encoding: UTF-8
 timezone: America/New_York
 markdown: kramdown
 highlighter: rouge

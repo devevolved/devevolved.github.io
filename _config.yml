@@ -5,6 +5,9 @@ github:
   repo: https://github.com/scottdorman/devevolved.github.io
   feedback: https://github.com/devevolved/feedback
 
+sass:
+    style: compressed
+
 gems:
   - jekyll-feed
   - jekyll-mentions

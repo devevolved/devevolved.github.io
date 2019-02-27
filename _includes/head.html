@@ -1,18 +1,9 @@
-﻿{% if post.url %}
-    {% assign path = post.url %}
-{% elsif page.url %}
-    {% assign path = page.url %}
-{% else %}
-    {% assign path = site.url %}
-{% endif %}
-<head>
+﻿<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% if page.keywords %}
     <meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <title>DevEvolved - {{ page.title }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <link rel="canonical" href="{% if post.url %}{{ path }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"

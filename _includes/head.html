@@ -1,6 +1,6 @@
 ﻿{% if post.url %}
     {% assign path = post.url %}
-{% elseif page.url %}
+{% elsif page.url %}
     {% assign path = page.url %}
 {% else %}
     {% assign path = site.url %}
@@ -11,8 +11,7 @@
     {% if page.keywords %}
     <meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <title>DevEvolved - {{ page.title }}</title>
-    {% if page.description %}
-    <meta name="description" content="{{ page.description }}">{% endif %}
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <link rel="canonical" href="{% if post.url %}{{ path }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico">

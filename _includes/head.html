@@ -1,26 +1,37 @@
-﻿<head>
+﻿{% if post.url %}
+    {% assign path = post.url %}
+{% elseif page.url %}
+    {% assign path = page.url %}
+{% else %}
+    {% assign path = site.url %}
+{% endif %}
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">{% endif %}
     <title>DevEvolved - {{ page.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">{% endif %}
+    <link rel="canonical" href="{% if post.url %}{{ path }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/favicon.ico">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-		  crossorigin="anonymous" />
-	<link rel="stylesheet" href="{{ site.url }}/lib/bootstrap-toolkit/bootstrap-toolkit.min.css" />
-	<link rel="stylesheet" href="{{ site.url }}/lib/mdl2-icons/css/mdl2-icons.min.css" />
-	<link rel="stylesheet" href="{{ site.url }}/lib/font-awesome/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="{{ site.url }}/css/site.css" />
-	<link rel="stylesheet" href="{{ site.url }}/css/post.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ site.url }}/lib/bootstrap-toolkit/bootstrap-toolkit.min.css" />
+    <link rel="stylesheet" href="{{ site.url }}/lib/mdl2-icons/css/mdl2-icons.min.css" />
+    <link rel="stylesheet" href="{{ site.url }}/lib/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{ site.url }}/css/site.css" />
+    <link rel="stylesheet" href="{{ site.url }}/css/post.css" />
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2662385-5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2662385-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-		gtag('config', 'UA-2662385-5');
-	</script>
-   {% seo %}
+        gtag('config', 'UA-2662385-5');
+    </script>
+    {% seo %}
 </head>

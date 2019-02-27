@@ -33,6 +33,8 @@ defaults:
       type: "posts"
     values:
       comments: true  # add comments to all blog posts
+      structured-data: false # do not include structured data
+      banner: false # do not include a banner image
   -
     scope:
       path: "" # all files

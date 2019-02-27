@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
   {% include head.html %}
-  <body>
+<body>
     {% include nav.html %}
-	<div class="container m-t-2">
-	    {{ content }}
+    {% if page.banner %}
+    {% include banner.html %}
+    {% endif %}
+    <div class="container m-t-2">
+        {{ content }}
     </div>
     {% include footer.html %}
     {% include footer-scripts.html %}
-  </body>
+    {% if page.structured-data %}
+        {% include structured_data.html %}
+    {% endif %}
+</body>
 </html>

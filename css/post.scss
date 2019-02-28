@@ -1,8 +1,7 @@
 ---
 ---
 
-@import url("pygments.css")
-;
+@import url("pygments.css");
 
 .archives {
     ul {
@@ -20,17 +19,10 @@
     .title {
         font-size: 14pt;
     }
-
-    .post-meta .list-inline li {
-        font-size: 12pt;
-    }
 }
 
 .post-meta {
     .list-inline {
-        .mdl2 {
-            font-size: 18px;
-        }
 
         li:not(:last-child):after {
             margin-left: 10px;
@@ -49,6 +41,7 @@
 
     .mdl2 {
         vertical-align: middle;
+        font-size: 18px;
     }
 }
 

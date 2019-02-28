@@ -1,5 +1,6 @@
 url: "https://devevolved.github.io"
 title: DevEvolved
+logo: /images/logo-transparent-back-small-png.png
 
 github:
   repo: https://github.com/devevolved/devevolved.github.io
@@ -33,7 +34,6 @@ defaults:
       type: "posts"
     values:
       comments: true  # add comments to all blog posts
-      structured-data: false # do not include structured data
       banner: false # do not include a banner image
   -
     scope:
@@ -47,6 +47,20 @@ defaults:
       type: "pages"
     values:
       nav-include: true  # include in header nav
+
+# SEO configuration
+
+
+twitter:
+  username: devevolvedHQ
+  card: summary
+
+social:
+  links:
+    - https://twitter.com/devevolvedHQ
+    - https://www.facebook.com/devevolved
+    - https://www.linkedin.com/company/devevolved
+    - https://github.com/devevolved
 
 # Exclude these files from production site
 exclude:

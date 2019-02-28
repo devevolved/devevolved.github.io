@@ -15,13 +15,24 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                	<li><a href="https://devevolved.net/" title="Home">Home</a></li>
-                	<li><a href="https://devevolved.net/services" title="Services">Services</a></li>
-                	<li><a href="https://devevolved.net/approach" title="Approach">Approach</a></li>
-                	<li><a href="https://devevolved.net/about" title="About">About</a></li>
-                	<li><a href="https://devevolved.net/careers" title="Careers">Careers</a></li>
-                	<li><a href="https://devevolved.net/contact" title="Contact">Contact</a></li>
-                	<li class="active"><a href="{{ site.url }}" title="Blog">Blog</a></li>
+                    <li><a href="https://devevolved.net/" title="Home">Back to DevEvolved</a></li>
+                    <li class="{% if page.url == "/" %} active{% endif %}">
+                        <a href="{{ site.url }}">Home {% if page.url == "/" %} <span class="sr-only">(current)</span>{% endif %}</a>
+                    </li>
+                    <li class="sidebar-nav-item">
+                        <a href="{{ site.github.feedback }}/issues/new" target="_blank">Feedback</a>
+                    </li>
+
+                    {% assign pages_list = site.pages %}
+                    {% for node in pages_list %}
+                    {% if node.title != null %}
+                    {% if node.layout == "page" and node.nav-include != false %}
+                    <li class="{% if page.url == node.url %} active{% endif %}">
+                        <a href="{{ node.url }}">{{ node.title }}{% if page.url == node.url %} <span class="sr-only">(current)</span>{% endif %}</a>
+                    </li>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->

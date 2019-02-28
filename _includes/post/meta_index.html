@@ -1,3 +1,5 @@
+{% assign author = site.data.authors[post.author] %}
+
 <div class="post-meta text-muted small">
     <ul class="list-inline">
         {% include post/date.html %}{{ time }}
@@ -5,4 +7,9 @@
         {% include post/tags.html %}
         {% include post/comments_link.html %}
     </ul>
+    {% if author %}
+    <p>
+        Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
+    </p>
+    {% endif %}
 </div>

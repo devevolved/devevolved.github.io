@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Archives
+banner: true
 ---
 
 <div class="archives" itemscope itemtype="http://schema.org/Blog">

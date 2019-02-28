@@ -2,6 +2,7 @@
 layout: post
 title: The next step in software development 
 date: '2019-02-25 22:36 -05:00'
+author: scott-dorman
 ---
 
 Based in Tampa, Florida, DevEvolved is a software development company built on a foundation of providing high-quality, cutting-edge software using modern design principles, clean code, and straightforward solutions at an affordable price.

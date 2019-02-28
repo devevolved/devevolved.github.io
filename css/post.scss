@@ -1,7 +1,8 @@
 ---
 ---
 
-@import url("pygments.css");
+@import url("pygments.css")
+;
 
 .archives {
     ul {
@@ -27,14 +28,22 @@
 
 .post-meta {
     .list-inline {
+        .mdl2 {
+            font-size: 18px;
+        }
+
         li:not(:last-child):after {
             margin-left: 10px;
             content: "\2022";
         }
 
-        &.social-sharing li:after {
-            content: "";
-            margin-left: 0;
+        &.social-sharing {
+            font-size: 18px;
+
+            & li:after {
+                content: "";
+                margin-left: 0;
+            }
         }
     }
 
@@ -96,6 +105,10 @@
 .intro-header {
     margin: 80px 0 20px;
     position: relative;
+
+    &.no-img {
+        margin-top: 0;
+    }
 
     &.big-img {
         background: no-repeat center center;
@@ -309,4 +322,19 @@
 
 .hr-divider {
     width: 75%;
+}
+
+.author-card {
+    margin-top: 4rem;
+
+    &-title {
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: 2rem;
+        background-color: #75b9e7;
+    }
+
+    .social {
+        font-size: 24px;
+    }
 }

@@ -2,9 +2,8 @@
     <ul class="list-inline">
         {% include post/date.html %}{{ time }}
         {% include post/reading_time.html text=content %}
-        {% include post/tags.html %}
-        {% include post/comments_link.html %}
         {% include post/edit.html %}
     </ul>
+    {% include post/tags.html %}
     {% include post/sharing.html %}
 </div>

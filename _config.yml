@@ -35,6 +35,7 @@ defaults:
     values:
       comments: true  # add comments to all blog posts
       banner: false # do not include a banner image
+      author: scott-dorman
   -
     scope:
       path: "" # all files

@@ -6,27 +6,25 @@ banner: true
 
 
 <div class="archives" itemscope itemtype="http://schema.org/Blog">
-    <div class="tags-expo-list">
+    <ul class="nav nav-pills">
         {% for author in site.data.authors %}
-        <a href="#{{ author[0] | slugify }}" class="post-tag">{{ author[1].name }}</a>
+        <li role="presentation"><a href="#{{ author[0] | slugify }}" class="post-tag">{{ author[1].name }}</a></li>
         {% endfor %}
-    </div>
+    </ul>
     <hr />
-    <div class="tags-expo-section">
-        {% for author in site.data.authors %}
-        <fieldset>
-            <legend id="{{ author[0] | slugify }}">{{ author[1].name }}</legend>
+    {% for author in site.data.authors %}
+    <fieldset>
+        <legend id="{{ author[0] | slugify }}">{{ author[1].name }}</legend>
 
-            {% assign author_posts = site.posts | where: "author", author[0] %}
-            <ul class="archive-list">
-                {% for post in author_posts %}
-                <li>
-                    <span class="title"><a href="{{ post.url }}">{{post.title}}</a></span>
-                    {% include post/meta_index.html show_author="false" %}
-                </li>
-                {% endfor %}
-            </ul>
-        </fieldset>
-        {% endfor %}
-    </div>
+        {% assign author_posts = site.posts | where: "author", author[0] %}
+        <ul class="archive-list">
+            {% for post in author_posts %}
+            <li>
+                <span class="title"><a href="{{ post.url }}">{{post.title}}</a></span>
+                {% include post/meta_index.html show_author="false" %}
+            </li>
+            {% endfor %}
+        </ul>
+    </fieldset>
+    {% endfor %}
 </div>

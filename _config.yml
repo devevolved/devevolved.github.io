@@ -9,7 +9,7 @@ github:
 sass:
     style: compressed
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-mentions
   - jekyll-sitemap
